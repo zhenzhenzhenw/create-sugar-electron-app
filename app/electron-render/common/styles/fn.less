@@ -1,0 +1,59 @@
+// 文字过长出省略号
+.setTextEllipsis() {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.clear() {
+  &:after {
+    content: "";
+    clear: both;
+    display: block;
+  }
+}
+
+.wh(@width, @height) {
+  width: @width;
+  height: @height;
+}
+
+.setPosition(@type, @top, @left) {
+  position: @type;
+  top: @top;
+  left: @left;
+}
+
+.center(){
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.textHover() {
+  user-select: none;
+  &:not(:disabled) {
+    cursor: pointer;
+  }
+  &:not(:disabled):hover {
+    color: @color-white;
+  }
+  &:not(:disabled):active {
+    color: @color-white;
+  }
+}
+
+.blueBlockHover() {
+  &:not(:disabled) {
+    cursor: pointer;
+  }
+  &:not(:disabled):hover {
+    background-color: @color-main;
+  }
+  &:not(:disabled):active {
+    background-color: @color-main;
+  }
+}

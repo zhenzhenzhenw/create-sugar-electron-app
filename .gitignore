@@ -1,0 +1,8 @@
+dist
+node_modules
+release
+*.log
+webpack_cache
+
+# mac自动生成的文件
+.DS_Store
